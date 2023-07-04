@@ -36,7 +36,6 @@ public class WebSeriesService {
         webSeries.setRating(webSeriesEntryDto.getRating());
         webSeries.setSubscriptionType(webSeriesEntryDto.getSubscriptionType());
         webSeries.setProductionHouse(productionHouse);
-        webSeries = webSeriesRepository.save(webSeries);
 
         productionHouse.getWebSeriesList().add(webSeries);
         double currRating = productionHouse.getRatings();
@@ -44,6 +43,7 @@ public class WebSeriesService {
         productionHouse.setRatings(rating);
 
         productionHouseRepository.save(productionHouse);
+        webSeries = webSeriesRepository.save(webSeries);
         return webSeries.getId();
     }
 
