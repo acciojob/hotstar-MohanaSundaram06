@@ -29,7 +29,7 @@ public class SubscriptionService {
 
         Subscription subscription = new Subscription();
         subscription.setSubscriptionType(subscriptionEntryDto.getSubscriptionType());
-        subscription.setStartSubscriptionDate(new Date());
+//        subscription.setStartSubscriptionDate(new Date());
         subscription.setUser(user);
         subscription.setNoOfScreensSubscribed(subscriptionEntryDto.getNoOfScreensRequired());
 
